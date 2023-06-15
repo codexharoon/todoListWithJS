@@ -1,0 +1,39 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.name-field,.date-field{
+    padding: 10px;
+    font-size: 14px;
+}
+.name-field::placeholder{
+    font-size: 14px;
+}
+
+.add-btn{
+    padding: 12px 20px;
+    background-color: rgb(19, 156, 19);
+    border: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.delete-btn{
+    padding: 12px 20px;
+    background-color: rgb(182, 8, 8);
+    border: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.todo-row{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    column-gap: 10px;
+    row-gap: 20px;
+    font-size: 14px;
+    align-items: center;
+}
