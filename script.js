@@ -21,18 +21,17 @@ function todo(){
 
 
 function printTodo(){
-    
-    for(let i=0; i<todos.length; i++){
 
+    todos.forEach(function(todoObj,i){
         todoHTML+=`
-                <div>${todos[i].name}</div>
-                <div>${todos[i].date}</div>
+                <div>${todoObj.name}</div>
+                <div>${todoObj.date}</div>
                 <button class="delete-btn" onclick="
                     todos.splice(${i},1);
                     printTodo();
                 ">Delete</button>
         `;
-    }
+    })
 
     document.querySelector('.todo-list').innerHTML = todoHTML;
     todoHTML = '';
