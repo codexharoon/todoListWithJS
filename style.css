@@ -18,6 +18,9 @@ body{
     text-align: center;
     cursor: pointer;
 }
+.add-btn:active{
+    opacity: 0.8;
+}
 
 .delete-btn{
     padding: 12px 20px;
@@ -26,6 +29,9 @@ body{
     color: white;
     text-align: center;
     cursor: pointer;
+}
+.delete-btn:active{
+    opacity: 0.8;
 }
 
 .todo-row{

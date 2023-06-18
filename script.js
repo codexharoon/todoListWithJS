@@ -26,13 +26,26 @@ function printTodo(){
         todoHTML+=`
                 <div>${todoObj.name}</div>
                 <div>${todoObj.date}</div>
-                <button class="delete-btn" onclick="
-                    todos.splice(${i},1);
-                    printTodo();
-                ">Delete</button>
+                <button class="todo-delete delete-btn">
+                    Delete
+                </button>
         `;
     })
 
     document.querySelector('.todo-list').innerHTML = todoHTML;
     todoHTML = '';
+    
+    document.querySelectorAll('.todo-delete').forEach( (delBtn,i)=> {
+    
+        delBtn.addEventListener('click', ()=>{
+            todos.splice(i,1);
+            printTodo();
+        })
+    
+    });
 }
+
+
+const addBtnElement = document.querySelector('.todo-add');
+addBtnElement.addEventListener('click',todo);
+
